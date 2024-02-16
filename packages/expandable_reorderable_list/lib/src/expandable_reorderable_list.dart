@@ -456,6 +456,7 @@ class _ExpandableReorderableListState<K extends Key>
     }
     return widget.onReorder != null
         ? ReorderableListView.builder(
+            shrinkWrap: true,
             itemCount: itemCount,
             itemBuilder: itemBuilder,
             onReorder: (oldIndex, newIndex) {
@@ -466,6 +467,7 @@ class _ExpandableReorderableListState<K extends Key>
             scrollDirection: widget.scrollDirection,
           )
         : ListView.builder(
+            shrinkWrap: true,
             itemCount: itemCount,
             itemBuilder: itemBuilder,
             controller: widget.scrollController,
